@@ -1,0 +1,165 @@
+.regent-banner {
+    margin-top: 30px;
+
+    p {
+        padding-bottom: 0;
+        line-height: 157%;
+    }
+
+    &__inner {
+        display: flex;
+
+        @media (max-width: $w_mob) {
+            flex-direction: column;
+
+            p {
+                padding-bottom: 0;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__logo {
+        width: 100%;
+
+        position: absolute;
+        top: 100px;
+        right: 0;
+        left: 0;
+        z-index: 3;
+
+        text-align: center;
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+
+        @media (max-width: $w_mob) {
+            position: relative;
+            top: 0;
+
+            img {
+                filter: contrast(0.8);
+            }
+        }
+    }
+
+    &__left {
+        width: 50%;
+
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: $w_mob) {
+            width: 100%;
+            height: 300px;
+            margin-top: 28px;
+        }
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        picture,
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            object-fit: cover;
+        }
+    }
+
+    &__right {
+        width: 50%;
+        padding-left: 100px;
+        padding-top: 270px;
+
+        .button-main {
+            margin-top: 60px;
+
+            @media (max-width: $w_mob) {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: $w_tab) {
+            padding-left: 50px;
+        }
+
+
+        @media (max-width: $w_mob) {
+            width: 100%;
+            padding-left: 0;
+            padding-top: 0;
+            margin-top: 30px;
+
+            .button-main {
+                width: 100%;
+                display: flex;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 45px;
+        height: 183px;
+
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        picture,
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            object-fit: cover;
+        }
+    }
+
+    @media only screen and (max-width: 990px) {
+        &__img {
+            display: none;
+        }
+    }
+
+}

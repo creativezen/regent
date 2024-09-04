@@ -1,0 +1,71 @@
+.regent-contacts {
+
+
+	&__inner {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $w_mob) {
+			display: block;
+		}
+
+		h2 {
+			margin-bottom: 0;
+
+			text-align: left;
+		}
+	}
+
+	&__cell {
+		width: 50%;
+
+		@media (max-width: $w_mob) {
+			width: 100%;
+
+			& + .regent-contacts__cell {
+				margin-top: 25px;
+			}
+		}
+	}
+
+	&__content {
+		padding: 40px;
+
+		background: var(--bg-gray);
+		border-radius: 8px;
+
+		@media (max-width: $w_mob) {
+			padding: 25px 20px;
+		}
+	}
+
+	&__item {
+		& + .regent-contacts__item {
+			margin-top: 15px;
+		}
+	}
+
+	&__title {
+		font-size: clamp(18px, 1.75vw, 28px);
+		line-height: 150%;
+		color: var(--c-gray-text2);
+	}
+
+	&__tx {
+		margin-top: 10px;
+
+		font-size: clamp(18px, 2.5vw, 40px);
+		line-height: 140%;
+	}
+
+	&__link {
+		font-size: clamp(18px, 2.5vw, 40px);
+		line-height: 140%;
+		color: var(--black);
+		transition: 0.3s;
+
+		&:hover {
+			color: var(--brand-color);
+		}
+	}
+}

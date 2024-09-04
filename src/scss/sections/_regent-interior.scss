@@ -1,0 +1,137 @@
+.regent-interior {
+    &__inner {
+        .regent-title {
+            text-align: center;
+        }
+    }
+
+    &__holder {
+        padding: 0 50px;
+
+        position: relative;
+
+        @media (max-width: $w_tab) {
+            padding: 0 20px;
+        }
+
+        @media (max-width: $w_mob) {
+            padding: 0;
+        }
+    }
+
+    &__slider {
+        height: 400px;
+
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: $w_mob) {
+            height: auto;
+        }
+
+        .swiper-slide {}
+
+        &-item {
+            height: 260px;
+
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            transition: all 200ms linear;
+            transform: scale(0.82);
+
+            @media (max-width: $w_mob) {
+                transform: none;
+                height: 300px;
+            }
+
+            .swiper-slide-active & {
+                margin: 0 -28px;
+                height: 400px;
+                transform: scale(1);
+
+                @media (max-width: $w_mob) {
+                    height: 300px;
+                    margin: 0;
+                }
+            }
+
+            picture,
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__description {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 70px;
+        padding-top: 45px;
+        border-top: 1px solid var(--c-gray);
+
+        @media (max-width: $w_mob) {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 28px;
+            display: block;
+        }
+
+
+        p {
+            padding-bottom: 0;
+
+            font-size: 16px;
+
+            &+p {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__logo {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    &__cell {
+        width: 34%;
+
+        @media (max-width: $w_mob) {
+            width: 100%;
+        }
+
+        &_center {
+            width: 30%;
+
+            @media (max-width: $w_mob) {
+                width: 100%;
+                margin: 40px 0;
+            }
+        }
+
+        &:last-of-type {
+            text-align: right;
+
+            @media (max-width: $w_mob) {
+                text-align: left;
+            }
+        }
+    }
+}

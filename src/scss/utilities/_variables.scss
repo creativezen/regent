@@ -1,0 +1,34 @@
+// FONTS
+$font: 'Montserrat', sans-serif;
+$font2: 'Trajan Pro 3', sans-serif;
+
+// PATH TO IMAGES
+$imgpath : "../img";
+
+// responsive breackpoints
+$w_mob_s:  768px;
+$w_mob:    991px;
+$w_tab:    1200px;
+$w_laptop: 1500px;
+
+$w_min:    320px;
+$w_max:    2560px;
+
+
+html {
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --c-gray: #BBB6AE;
+    --c-gray-text: #B5B5B5;
+    --c-gray-text2: #878383;
+
+    --brand-color: #BD9042;
+
+    --bg-gray: #F8F8F8;
+    --bg-gray2: #F0F0F0;
+
+
+
+}
